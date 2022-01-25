@@ -53,7 +53,6 @@ app.use(flash());
 app.use('/search', searchRouter);
 app.use('/user', userRouter);
 
-
 app.get("/", (req, res) => {
   res.redirect("/home");
 });
