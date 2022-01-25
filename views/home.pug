@@ -1,0 +1,32 @@
+extends layout 
+
+block content
+  section(id="form-container")
+    form.form(method='POST', action='search') 
+      #form-header 
+        h1 Find Your Referrals
+        if errorMessages && errorMessages.length > 0
+          ul.flash
+            each message in errorMessages
+              li.error= message
+      #form-body
+        .row
+          .input-group 
+            label(for='address') Street Address
+            input(type="text" name="address" placeholder="123 Maple Street" value=address)
+          .input-group
+            label#address(for="zipcode") Zipcode 
+            input#zipcode(type="text" name="zipcode" placeholder="24765" value=zipcode)
+        .row    
+          .input-group
+            label(for="radius") Search Radius
+            input#radius(type="text" name="radius" placeholder="25" value=radius)
+          .input-group
+            label(for="sic_code") Industry Type
+            select#select-type(name="sic_code" placeholder="Choose a Business Type" value=sic_code)
+              option(value="Dentists") Dentists
+              option(value="Marketing") Marketing Firms
+              option(value="Restaraunts") Restaraunts
+      .row
+        .bttn-wrapper 
+          button#submit-bttn(type='submit') Search

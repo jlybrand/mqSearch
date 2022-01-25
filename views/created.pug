@@ -1,0 +1,27 @@
+extends layout
+
+block content 
+
+  if created
+    #account-msg-container
+      h2= `Account created for ${username} with the following referral sources.`
+
+  if error 
+    #error-container
+      h2= error  
+  .targets-table-wrapper
+    if targets
+      table(id="results") 
+        thead
+          tr 
+            th Name 
+            th Address 
+            th Phone
+        tbody    
+          each target in targets 
+            tr 
+              td= target.name 
+              td= `${target.address}, ${target.city}, ${target.state} ${target.postal_code}`
+              td= target.phone
+  div 
+    a.cancelBttn(href='/') Home

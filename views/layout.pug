@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  //- meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='/stylesheets/venit.css')
+  title Venit
+
+body
+  #hero-image
+    #intro-container
+      h1(id="sub-title") #{title}
+      //- h2 Easily search for referrals by industry type within a radius that you specify and build a valuable marketing network for your business.
+      //- h2 Get started below...
+  block content
+    if errorMessages && errorMessages.length > 0
+      ul.flash
+        each message in errorMessages
+          li.error= message
+
+  footer
+    p(id='footer-text') Copyright SandlapperDev &copy; 2021
+    a(id='footer-text' href="tel:+18005550199") 1-555-555-0199

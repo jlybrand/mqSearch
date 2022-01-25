@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  //- link(rel='stylesheet', href='/stylesheets/results-page.css')
+  #results-header
+    #results-message-wrapper
+      h2(id="message")= message
+  
+  if eligibile
+    .results-bttn-container
+      .results-bttn-row
+        a.submitFormBttn(href='/user/register') Get My Referrals
+        a.cancelBttn(href='/') Contact Us 
+        a.faqs(href="/faqs") FAQs
+
+  else 
+    a(href='/') Home
+
+
+  .map-container 
+    .map
+
+          //- #bttnWrapper      #faq-container          .results-bttn-container

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-size: 1em;
+  height: 100%;
+  /* margin: 0px; */
+  padding: 0px;
+}
+
+body {
+  background: #2a7216; /* fallback for old browsers */
+  background: linear-gradient(
+    to top,
+    #f5f8f4,
+    #40832e
+  ); 
+  background: -webkit-linear-gradient(
+    to top,
+    #f5f8f4,
+    #40832e
+  ); 
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#hero-image {
+  /* border: 1px solid #fff; */
+  background-image: url("/images/henry-perks-map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20%;
+  /* margin-bottom: 1em; */
+  max-width: 100%;
+}
+
+h1 {
+  color: #222;
+  margin: 1em auto;
+  text-align: center;
+}
+
+ul.flash {
+  background-color: rgb(158, 29, 29);
+  border: solic 2px black;
+  color: snow;
+  list-style-type: none;
+}
+
+#form-container {
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  overflow-y: scroll;
+}
+
+.form {
+  /* border: 1px solid blue; */
+  background-color: #fff;
+  flex: 1;
+  max-width: 600px;
+}
+
+#form-header {
+  padding: 0.5em 0;
+  /* border-bottom:1px solid rgb(26, 25, 25); */
+}
+
+#form-header > h1 {
+  color: #222;
+  font-size: 1.7em;
+  text-align: center;
+}
+
+#form-body {
+  /* border: 1px solid #222; */
+  background:white;
+  padding:5px 10px;
+}
+
+.row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+}
+
+.bttn-row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+}
+
+.input-group, .bttn-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 5px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input[type="text"], select {
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #676;
+  border: 1px solid #6d6767;
+  background: white;
+  outline: none;
+}
+
+select {
+  color: #222;
+  height: 38px;
+}
+
+.form-bttn-wrapper {
+  flex: 1;
+}
+
+#submit-bttn {
+  background: #40832e; /* fallback for old browsers */
+  background: linear-gradient(
+    to left,
+    #3e423e,
+    #40832e
+  ); 
+  background: -webkit-linear-gradient(
+    to left,
+    #2a3527,
+    #40832e
+  ); 
+  color: snow;
+  font-size: 1.3em;
+  padding: 0.5em;
+  text-decoration: none;
+} 
+
+#submit-bttn:hover {
+  background: linear-gradient(
+    to right,
+    #3e423e,
+    #40832e
+  ); 
+  cursor: pointer;
+}
+
+#main {
+  display: flex;
+}
+
+#account-msg-container {
+  color: snow;
+  /* flex: 1; */
+  margin: auto;
+}
+
+.targets-table-wrapper {
+  display: flex;
+  margin: auto;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  overflow-x: auto;
+}
+
+thead {
+  background-color: #f1ebeb;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+tr:hover {
+  background-color: rgb(222, 236, 227);
+}
+
+#results-header {
+  /* border: solid 1px red; */
+  color: snow;
+  display: flex;
+  padding: 1em;
+  text-align: center;
+}
+
+.results-bttn-container {
+  /* border: solid 2px black; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* max-width: 100%; */
+}
+
+.results-bttn-row {
+  /* border: solid 3px blue; */
+  flex: 1;
+  justify-content: space-evenly;
+  display: flex;
+  margin: 1em;
+  max-width: 100%;
+}
+
+.results-bttn-row > a {
+  color: #2a7216; /* fallback for old browsers */
+  color: -webkit-linear-gradient(
+    to left,
+    #061700,
+    #52c234
+  ); 
+  color: linear-gradient(
+    to right,
+    #0f2b06,
+    #52c234
+  ); 
+  background-color: snow;
+  text-decoration: none; 
+  flex: 1;
+  padding: 0.7em;
+  text-align: center;
+  margin: 1em;
+
+}
+
+#map-container {
+  background-color: #fff;
+  border: solid 1px black;
+  display: flex;
+  margin: auto;
+}
+
+footer {
+  /* border: 1px solid yellow; */
+  align-items: baseline;
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+#footer-text {
+  color: snow;
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  #header-container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .row {
+    flex-direction: column;
+  }
+}

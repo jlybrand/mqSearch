@@ -1,0 +1,32 @@
+{
+  "name": "express-skeleton",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node venit.js",
+    "dev": "npx nodemon venit.js",
+    "test": "jest"
+  },
+  "author": "jal",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "connect-loki": "^1.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "jest": "^27.4.5",
+    "morgan": "^1.10.0",
+    "needle": "^3.0.0",
+    "nodemailer": "^6.7.2",
+    "pg": "^8.7.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "description": ""
+}

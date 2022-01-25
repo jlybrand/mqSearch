@@ -1,0 +1,6 @@
+node_modules
+README.md 
+.env
+session-store.db
+notes
+mail.js

@@ -1,0 +1,33 @@
+extends layout
+
+block content 
+  section(id="form-container")
+    form.form(method='POST', action='/user/register') 
+      #form-header 
+        h1 Create Your Account
+      #form-body
+        .row
+          .input-group 
+            label#firstname(for='firstname') First Name
+            input(type="text" name="firstname" placeholder="Enter your first name" value=firstname)
+          .input-group
+            label#lastname(for="lastname") Last Name 
+            input#zipcode(type="text" name="lastname" placeholder="Enter your last name" value=lastname)
+        .row    
+          .input-group
+            label(for="email") Email
+            input#email(type="text" name="email" placeholder="myeamil@me.com" value=email)
+        .row    
+          .input-group
+            label(for="username") Username
+            input#email(type="text" name="username" placeholder="username" value=username)            
+        .row    
+          .input-group
+            label(for="password") Password
+            input#password(type="text" name="password" placeholder="Enter a password" value=password)
+          .input-group
+            label(for="confirm-password") Confirm Password
+            input#confirm-password(type="text" name="confirm-password" placeholder="Confirm your password" value=password)            
+        .row
+          .bttn-wrapper 
+            button#submit-bttn(type='submit') Submit
